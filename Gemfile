@@ -36,11 +36,11 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
   
-  gem 'rspec-rails', "~> 2.14"
+  gem 'rspec-rails', "~> 3.6"
 end
 
 group :test do
-  gem 'capybara', "2.1.0"
+  gem 'capybara', "2.2.0"
 end
 
 group :development do
