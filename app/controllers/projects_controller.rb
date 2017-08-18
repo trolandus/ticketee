@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-    before_action :find_project, only: [:show, :edit, :update]
+    before_action :find_project, only: [:show, :edit, :update, :destroy]
     
     def index
         @projects = Project.all
@@ -36,6 +36,14 @@ class ProjectsController < ApplicationController
             flash[:alert] = "Project has not been updated"
             render "edit"
         end
+    end
+    
+    def destroy
+        @project.destroy
+        
+        flash[:notice] = "Project has been destroyed"
+        
+        redirect_to projects_path
     end
     
     private
