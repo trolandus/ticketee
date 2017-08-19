@@ -5,3 +5,5 @@
     project_path(@project),
     method: :delete,
     data: { confirm: "Are you sure?" } %>
+    
+<%= link_to "New Ticket", new_project_ticket_path(@project) %>
